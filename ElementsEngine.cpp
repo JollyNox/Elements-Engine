@@ -1,14 +1,30 @@
 #include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
 #include <iostream>
 
 int main()
 {
-    sf::Clock Clock;
-    while (Clock.GetElapsedTime() < 5.f)
+    // Create the main rendering window
+    sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Graphics");
+    
+    // Start game loop
+    while (App.IsOpened())
     {
-        std::cout << Clock.GetElapsedTime() << std::endl;
-        sf::Sleep(0.5f);
+        // Process events
+        sf::Event Event;
+        while (App.PollEvent(Event))
+        {
+            // Close window : exit
+            if (Event.Type == sf::Event::Closed)
+                App.Close();
+        }
+
+        // Clear the screen (fill it with black color)
+        App.Clear();
+
+        // Display window contents on screen
+        App.Display();
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }
