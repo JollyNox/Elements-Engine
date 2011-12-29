@@ -4,6 +4,9 @@
     <ClCompile Include="ElementsEngine.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -15,5 +18,10 @@
     <Filter Include="Headers">
       <UniqueIdentifier>{aae93dac-bfeb-4aab-a68a-444871a81390}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameObject.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
