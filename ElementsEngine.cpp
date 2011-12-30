@@ -1,30 +1,14 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "TestGame.h"
 
 int main()
 {
-    // Create the main rendering window
-    sf::RenderWindow App(sf::VideoMode(800, 600, 32), "SFML Graphics");
-    
-    // Start game loop
-    while (App.IsOpened())
-    {
-        // Process events
-        sf::Event Event;
-        while (App.PollEvent(Event))
-        {
-            // Close window : exit
-            if (Event.Type == sf::Event::Closed)
-                App.Close();
-        }
 
-        // Clear the screen (fill it with black color)
-        App.Clear();
+	TestGame* game = new TestGame();
 
-        // Display window contents on screen
-        App.Display();
-    }
+	game->run();
 
     return EXIT_SUCCESS;
 }

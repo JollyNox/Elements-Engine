@@ -6,7 +6,7 @@ GameObject::GameObject() : sf::Sprite() {
 	SetPosition(0, 0);
 }
 
-GameObject::GameObject(int x, int y) : sf::Sprite() {
+GameObject::GameObject(float x, float y) : sf::Sprite() {
 	SetPosition(x, y);
 }
 		

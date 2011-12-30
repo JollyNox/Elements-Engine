@@ -5,12 +5,12 @@
 #include <SFML/Graphics.hpp>
 
 
-class GameObject : sf::Sprite {
+class GameObject : public sf::Sprite {
 
 public:
 
 	GameObject();
-	GameObject(int x, int y);
+	GameObject(float x, float y);
 		
 	~GameObject();
 
