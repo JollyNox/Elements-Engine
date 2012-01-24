@@ -13,12 +13,21 @@ Game::Game(WindowParams params) {
 	exit = false;
 }
 
+Game::~Game() {
+
+}
+
+void Game::initialize(){}
+
 void Game::run() {
+	initialize();
 	 while (window->IsOpened()) {
 		update();
 		render();
 	}
 }
+
+
 
 void Game::update() {
 

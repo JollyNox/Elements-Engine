@@ -3,33 +3,38 @@
 
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
-#include <vector.h>
+#include <vector>
 
 class Animation {
 
 private:
-	Vector<sf::Texture> textures;
+	std::vector<sf::Texture*> textures;
 	float speed;
-	int frames;
 	int currentFrame;
-	sf::Texture texture;
-	sf:Rect<int> drawRectangle;
+	int ticks;
+
+//Will be used for spritesheet implementation later
+//	sf::Texture spriteSheet;
+//	sf:Rect<int> drawRectangle;
 
 public:
 	Animation();
+	~Animation();
+	Animation(const Animation &copy);
+
 	Animation(sf::Texture tex);
 	
-	void setTexture(sf::Texture *tex);
-	sf::Texture* getTexture();
+	void addFrame(sf::Texture *tex);
 
 	void setFrame(int frame);
-	int getFrame();
-
-	void update();
-
-
+	int getCurrentFrameId();
 	
-	
+	void setSpeed(int pSpeed);
+	int getSpeed();
+
+	sf::Texture* getCurrentTexture();
+
+	void update();	
 };
 
 #endif

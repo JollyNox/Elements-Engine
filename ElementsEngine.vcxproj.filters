@@ -13,6 +13,21 @@
     <ClCompile Include="TestGame.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundBufferManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -39,6 +54,21 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="TestGame.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundBufferManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

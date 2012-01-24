@@ -5,7 +5,6 @@
 
 int main()
 {
-
 	TestGame* game = new TestGame();
 
 	game->run();

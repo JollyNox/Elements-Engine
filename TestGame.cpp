@@ -3,16 +3,31 @@
 #include "TestGame.h"
 #include "Game.h"
 #include "types.h"
+#include "GameObject.h"
+#include <iostream>
+#include <string>
 
 
-	TestGame::TestGame() : Game() {}
+TestGame::TestGame() : Game() {}
+	
+void TestGame::initialize(){
+	Game::initialize();
+	textureManager = new TextureManager();
 
-	 void TestGame::update() {
-		Game::update();
-	}
+	textureManager->getResource("Content/test.bmp");
+	test = new GameObject(100, 100);
 
-	 void TestGame::render() {
-		Game::render();
-	}
+	test->SetTexture(*textureManager->getResource("Content/test.bmp"));
+
+}
+
+	void TestGame::update() {
+	Game::update();
+	test->draw(window);
+}
+
+	void TestGame::render() {
+	Game::render();
+}
 
 

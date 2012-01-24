@@ -37,6 +37,14 @@ bool GameObject::getVisible() {
 	return visible;
 }
 
+void GameObject::draw(sf::RenderWindow* renderWindow){
+	renderWindow->Draw(*this);
+
+}
+
+void update() {
+
+}
 
 
 

@@ -12,11 +12,15 @@ public:
 	
 	~Game();
 	void run();
+
+	virtual void initialize();
 	virtual void update();
 	virtual void render();
+
+	sf::RenderWindow* window;
 		
 private:
-	sf::RenderWindow* window;
+
 	WindowParams windowParams;
 	bool exit;
 };
